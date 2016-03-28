@@ -89,6 +89,7 @@ header .top_nav a {
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
+    color: #FFFFFF;
 }
 
 header .top_nav a:visited{
@@ -127,7 +128,7 @@ main .left_col .mail_menu {
     color: #0077cc;
     padding-left: 30px;
     line-height: 19px;
-    background: url(../mail-app/images/folder-icons.jpg) no-repeat;
+    background: url(../images/folder-icons.jpg) no-repeat;
     text-decoration: none;
 }
 
