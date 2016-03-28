@@ -19,8 +19,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/folder?folderName",
             template: "<mail-list folder-name='$ctrl.folderName'></mail-list>",
             controller: function ($stateParams) {
-                this.folderName = $stateParams.folderName;
-                console.log("mailList for"+this.folderName);
+                this.folderName = $stateParams.folderName;;
                 //MailService.selectedFolder = this.folderName;
             },
             controllerAs: "$ctrl"
@@ -34,7 +33,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             },
             onExit: function(MailService){
                 MailService.selectedMail = null;
-                console.log("exit mailView");
             },
             controllerAs: "$ctrl"
         })
