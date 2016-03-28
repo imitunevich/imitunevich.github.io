@@ -319,13 +319,6 @@ app.component("topNavItem",
         },
         templateUrl: 'components/top-nav/top-nav-itm.html',
         controller: function (ContactService,MailService) {
-            //TODO:remove isActive,setSelectedPage from script and html
-            /*this.isCurrentActive = () => {
-             return this.isActive({itemName: this.navItem});
-             };*/
-            /*this.setCurrentSelectedPage = () => {
-             this.setSelectedPage({itemName: this.navItem});
-             }*/
             this.reset = function(){
                 ContactService.selectedContact = null;
                 MailService.selectedMail = null;
@@ -441,8 +434,6 @@ app.component("contactView",
             save() {
                 if (this.isNew) {
                     this.service.add(this.contact).then((response)=> {
-                        //this.editMode = this.isNew = false;
-                        //this.contactId
                         this.editMode = false;
                         this.state.go("contactView", {contactId:this.contact.id});
                     });
