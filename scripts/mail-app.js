@@ -512,7 +512,7 @@ class BaseService {
     }
 
     getSelectedItem(folderName, itemId){
-        return this.http.get(`${this.utilsService.baseURL}${folderName.toLowerCase()}/${itemId}.json`)
+        return this.http.get(`${this.utilsService.baseURL}${folderName.toLowerCase()}/${itemId}.json`);
     }
 
     add(newItem, dataName = this.dataName) {
@@ -552,10 +552,11 @@ class BaseService {
     }
 }
 
+app.service("BaseService", BaseService); //need for testing;
+
 app.service("MailService", class MailService extends BaseService {
     constructor($http, UtilsService) {
         super($http, UtilsService);
-        this.selectedPage = null;
         this.selectedFolder = null;
         this.selectedMail = null;
     }
