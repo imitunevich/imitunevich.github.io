@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../),
+    basePath: '',
 
 
     // frameworks to use
@@ -15,12 +15,12 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        "imitunevich.github.io/scripts/angular.js",
-        "imitunevich.github.io/scripts/angular-messages.js",
-        "imitunevich.github.io/scripts/angular-ui-router.js",
-        "imitunevich.github.io/scripts/angular-mocks.js",
-        "imitunevich.github.io/scripts/mail-app.js",
-        "imitunevich.github.io/scripts/mail-app-test.js"
+        "scripts/angular.js",
+        "scripts/angular-messages.js",
+        "scripts/angular-ui-router.js",
+        "scripts/angular-mocks.js",
+        "scripts/mail-app.js",
+        "scripts/mail-app-test.js"
     ],
 
 
