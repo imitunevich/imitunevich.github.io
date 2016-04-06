@@ -80,7 +80,6 @@ app.component("mailPage",
     {
         templateUrl: 'components/mail-page.html',
         controller: function (MailService) {
-            this.folders = null;
 
             this.isMailSelected = () => {
                 return MailService.selectedMail !== null;
@@ -91,34 +90,15 @@ app.component("mailPage",
 
 app.component("folders",
     {
-        bindings: {
-            folders: "="
-        },
         templateUrl: 'components/folders/folder-list.html',
         controller: function (MailService) {
-            MailService.getFolders().then((folders) => {
-                this.folders = folders;
-                if (!MailService.selectedFolder) this.setSelectedFolder(this.folders[0].name);
-            });
+            this.getFolders = ()=> {
+                MailService.getFolders().then((folders) => {
+                    this.folders = folders;
+                });
+            };
 
-            /*this.setSelectedFolder = (folderName) => {
-                MailService.selectedFolder = folderName;
-                MailService.selectedMail = null;
-            }*/
-
-        }
-    }
-);
-
-app.component("folder",
-    {
-        bindings: {
-            folder: "="
-
-        },
-        templateUrl: 'components/folders/folder-item.html',
-        controller: function () {
-            this.iconClass = this.folder.name.toLowerCase().slice(0, 3);
+            this.getFolders();
         }
     }
 );
@@ -207,18 +187,6 @@ app.component("mailList",
     }
 );
 
-app.component("mailListItem",
-    {
-        bindings: {
-            mail: "<"
-        },
-        templateUrl: 'components/mails/mail-list-item.html',
-        controller: function ($filter) {
-            this.date = $filter('date')(new Date(this.mail.date), "MMM d");
-        }
-    }
-);
-
 class ViewController {
     constructor(service,$state) {
         this.service = service;
@@ -298,25 +266,13 @@ app.component("mailView",
     }
 );
 
-app.component("topNavList",
+app.component("topNav",
     {
         bindings: {
             navList: "<"
         },
-        templateUrl: 'components/top-nav/top-nav-list.html',
-        controller: function(){
-        }
-    }
-);
-
-
-app.component("topNavItem",
-    {
-        bindings: {
-            navItem: "<"
-        },
-        templateUrl: 'components/top-nav/top-nav-itm.html',
-        controller: function (ContactService,MailService) {
+        templateUrl: 'components/top-nav/top-nav.html',
+        controller: function(ContactService,MailService){
             this.reset = function(){
                 ContactService.selectedContact = null;
                 MailService.selectedMail = null;
@@ -324,6 +280,7 @@ app.component("topNavItem",
         }
     }
 );
+
 
 app.component("contactPage",
     {
@@ -370,17 +327,6 @@ app.component("contactList",
         }
     });
 
-app.component("contactItem",
-    {
-        bindings: {
-            contact: "<",
-            setSelectedContact: "&"
-        },
-        templateUrl: 'components/contacts/contact-item.html',
-        controller: function () {
-        }
-    }
-);
 
 app.component("contactView",
     {

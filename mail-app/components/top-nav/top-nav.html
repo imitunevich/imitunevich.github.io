@@ -1,0 +1,12 @@
+<nav class="top_nav">
+  <ul>
+    <!--<top-nav-item nav-item="navItem"
+                  ng-repeat="navItem in $ctrl.navList"></top-nav-item>-->
+    <li ng-repeat="navItem in $ctrl.navList">
+      <a ui-sref="{{navItem.state}}"
+         ui-sref-active="active"
+         ng-click="$ctrl.reset()">
+        {{navItem.title}}</a>
+    </li>
+  </ul>
+</nav>

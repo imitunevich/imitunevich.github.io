@@ -1,3 +1,9 @@
 <ul>
-    <folder ng-repeat="folder in $ctrl.folders" folder="folder"></folder>
+    <li ng-repeat="folder in $ctrl.folders">
+        <a ui-sref="mailList({folderName:folder.name})"
+           ui-sref-active="active"
+           ng-class="['folder', folder.name.toLowerCase().slice(0, 3)]">
+            {{folder.name}}
+        </a>
+    </li>
 </ul>
