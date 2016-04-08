@@ -19,7 +19,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: "/folder?folderName",
             template: "<mail-list folder-name='$ctrl.folderName'></mail-list>",
             controller: function ($stateParams) {
-                this.folderName = $stateParams.folderName;;
+                this.folderName = $stateParams.folderName;
                 //MailService.selectedFolder = this.folderName;
             },
             controllerAs: "$ctrl"
@@ -97,7 +97,6 @@ app.component("folders",
                     this.folders = folders;
                 });
             };
-
             this.getFolders();
         }
     }
@@ -423,8 +422,7 @@ app.component("customButton",
             clickHandler: "&"
         },
         templateUrl: 'components/components/button.html',
-        controller: function () {
-        }
+        controller: function () {}
     }
 );
 
@@ -436,12 +434,7 @@ app.component("messages",
             visibility: "<"
         },
         templateUrl: 'components/components/messages.html',
-        controller: function ($timeout) {
-            $timeout(()=> {
-                    if (this.visibility === undefined) this.visibility = true;
-                }
-            );
-        }
+        controller: function ($timeout) {}
     }
 );
 
