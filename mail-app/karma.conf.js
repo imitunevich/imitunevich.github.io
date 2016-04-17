@@ -1,5 +1,11 @@
 // Karma configuration
 // Generated on Fri Apr 01 2016 18:27:38 GMT+0300 (Багдадское время (зима))
+var webpackConfig = require("./webpack.config");
+var path = require("path");
+var entry = path.resolve(webpackConfig.entry)  + ".js";
+var preprocessors = {};
+preprocessors[entry] = ["webpack"];
+
 
 module.exports = function(config) {
   config.set({
@@ -19,8 +25,12 @@ module.exports = function(config) {
         "scripts/angular-messages.js",
         "scripts/angular-ui-router.js",
         "scripts/angular-mocks.js",
-        "scripts/mail-app.js",
-        "scripts/mail-app-test.js"
+        entry,
+        "services/tests.js",
+        "mails/tests.js",
+        "contacts/tests.js",
+        "shared/tests.js",
+        "main/tests.js"
     ],
 
 
@@ -31,8 +41,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-    },
+    preprocessors: preprocessors,
 
 
     // test results reporter to use
@@ -69,6 +78,22 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+      concurrency: Infinity,
+
+      webpack: webpackConfig,
+
+      plugins: [
+          require("karma-webpack"), //npm install karma-webpack
+          "karma-jasmine",
+          "karma-chrome-launcher"
+      ]
+
+      //karma + webpack:
+      //1) entry +".js"
+      //2) preprocessors
+      //3) webpack property
+      //3) plugins (works without them for me)
+
+
   })
-}
+};

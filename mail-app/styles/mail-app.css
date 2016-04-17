@@ -37,26 +37,25 @@ body ul {
     line-height: 26px;
 }
 
-.button.disabled  a{
+.button.disabled a {
     pointer-events: none;
-    cursor:default;
+    cursor: default;
     color: #C0C0C0;
 }
 
 .button.disabled,
-.button.disabled:hover{
+.button.disabled:hover {
     background-color: #E0E0E0;
 }
 
-.error_msg{
+.error_msg {
     position: absolute;
 }
 
-.error_msg .msg{
+.error_msg .msg {
     color: #FF0000;
     font-size: 16px;
 }
-
 
 header {
     min-height: 60px;
@@ -88,11 +87,12 @@ header .top_nav a {
     padding: 30px 5px 23px 5px;
     font-size: 20px;
     text-decoration: none;
+    outline: none;
     cursor: pointer;
     color: #FFFFFF;
 }
 
-header .top_nav a:visited{
+header .top_nav a:visited {
     color: #FFFFFF;
 }
 
@@ -128,11 +128,12 @@ main .left_col .mail_menu {
     color: #0077cc;
     padding-left: 30px;
     line-height: 19px;
-    background: url(../images/folder-icons.jpg) no-repeat;
+    background: url(images/folder-icons.jpg) no-repeat;
     text-decoration: none;
+    outline: none;
 }
 
-.mail_menu .folder:visited{
+.mail_menu .folder:visited {
     color: #0077cc;
 }
 
@@ -172,7 +173,7 @@ main .right_col {
 }
 
 .mail_list ul,
-.contact_list ul{
+.contact_list ul {
     max-height: 672px;
     overflow-y: auto;
 }
@@ -230,7 +231,7 @@ main .right_col {
     margin-bottom: -3px;
 }
 
-.contact_list .name{
+.contact_list .name {
     width: 275px;
     color: #0077cc;
 }
@@ -301,12 +302,12 @@ main .right_col {
     width: 200px;
 }
 
-.contact_view .name_row .error_msg{
+.contact_view .name_row .error_msg {
     top: 15px;
     left: 210px;
 }
 
-.contact_view .row .error_msg{
+.contact_view .row .error_msg {
     top: 15px;
     left: 210px;
     top: 10px;
@@ -361,17 +362,17 @@ main .right_col {
     padding-top: 20px;
 }
 
-.mail_view .new_msg .email{
+.mail_view .new_msg .email {
     position: relative;
     padding-bottom: 10px;
 }
 
-.mail_view .new_msg .email .error_msg{
+.mail_view .new_msg .email .error_msg {
     top: 2px;
     right: 10px;
 }
 
-.mail_view .new_msg .topic{
+.mail_view .new_msg .topic {
     padding-bottom: 40px;
 }
 
@@ -387,7 +388,7 @@ main .right_col {
     font-size: 16px;
 }
 
-.mail_view .new_msg .letter_body{
+.mail_view .new_msg .letter_body {
     width: 920px;
     height: 400px;
     line-height: 24px;
