@@ -31,12 +31,12 @@ class MailService extends BaseService {
         return this.add(mail, "sent");
     }
 
-    get selectedItem() {
-        return this.selectedMail;
+    get selectedMail() {
+        return this.selectedItem;
     }
 
-    set selectedItem(mail) {
-        this.selectedMail = mail;
+    set selectedMail(mail) {
+        this.selectedItem = mail;
     }
 
 }

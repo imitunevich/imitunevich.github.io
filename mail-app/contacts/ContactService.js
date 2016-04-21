@@ -18,12 +18,12 @@ class ContactService extends BaseService {
             .catch(error => console.log(error.message));
     }
 
-    get selectedItem() {
-        return this.selectedContact;
+    get selectedContact() {
+        return this.selectedItem;
     }
 
-    set selectedItem(contact) {
-        this.selectedContact = contact;
+    set selectedContact(contact) {
+        this.selectedItem = contact;
     }
 }
 
