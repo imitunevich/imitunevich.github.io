@@ -4,7 +4,7 @@ module.exports = {
         path:     __dirname + '/scripts',
         filename: "mail-app.js"
     },
-    watch: false, //пересборка live
+    watch: true, //пересборка live
 
     watchOptions: {
         aggregateTimeout: 100

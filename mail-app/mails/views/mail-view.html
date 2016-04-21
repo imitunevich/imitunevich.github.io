@@ -21,8 +21,13 @@
         <div ng-if="$ctrl.isNew" class="new_msg">
             <div class="email">
                 <label>To:</label>
-                <input name="email" ng-model="$ctrl.mail.email" required type="email">
-                <messages element="newMailForm.email" errors="$ctrl.mailFieldErrors" visibility="newMailForm.email.$dirty"></messages>
+                <input name="email" ng-model="$ctrl.mail.email"
+                       ng-model-options="{allowInvalid: true}"
+                       ng-change="$ctrl.onEmailChange()" ng-blur="$ctrl.onEmailBlur()"
+                       autocomplete="off" type="email" required>
+                <messages element="newMailForm.email" errors="$ctrl.mailFieldErrors"
+                          visibility="newMailForm.email.$dirty"></messages>
+                <autocomplete term="$ctrl.mail.email" has-focus="$ctrl.isAutocompleteFocused" is-visible="$ctrl.isAutocompleteVisible" choose-contact="$ctrl.chooseContact(contact)" ng-if="$ctrl.isAutocompleteVisible"></autocomplete>
             </div>
             <div class="topic">
                 <label>Subject:</label>

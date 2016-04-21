@@ -11,7 +11,7 @@ import contactViewStateTemplate from "./views/contact-view-state.html";
 import contactViewStateController from "./contactViewStateController";
 import ContactService from "./contactService";
 
-const contacts = angular.module("contacts", ["common", "services", "ngMessages", "ui.router"]);
+const contacts = angular.module("contacts", ["common", "services", "ngMessages", "ui.router", "ngSanitize"]);
 
 contacts.config(function ($stateProvider) {
     $stateProvider

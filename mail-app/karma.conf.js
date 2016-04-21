@@ -25,6 +25,7 @@ module.exports = function(config) {
         "scripts/angular-messages.js",
         "scripts/angular-ui-router.js",
         "scripts/angular-mocks.js",
+        "scripts/angular-sanitize.js",
         entry,
         "services/tests.js",
         "mails/tests.js",

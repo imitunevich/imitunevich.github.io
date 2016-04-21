@@ -1,0 +1,12 @@
+<div class="autocomplete">
+    <ul>
+        <li ng-repeat="contact in $ctrl.contacts"
+            ng-click="$ctrl.hasFocus=false; $ctrl.chooseContact({contact:contact});">
+            <span class="name">
+                <a ng-bind-html="contact.fullName" href="javascript:void(0)"
+                   ng-focus="$ctrl.hasFocus=true;" ng-blur="$ctrl.hasFocus=false;"></a>
+                </span>
+            <span class="mail_address" ng-bind-html="contact.email"></span>
+        </li>
+    </ul>
+</div>
