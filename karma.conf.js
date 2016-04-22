@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Fri Apr 01 2016 18:27:38 GMT+0300 (Багдадское время (зима))
-var webpackConfig = require("./webpack.config");
+var webpackConfig = require("./webpack.config.js");
 var path = require("path");
 var entry = path.resolve(webpackConfig.entry)  + ".js";
 var preprocessors = {};
@@ -11,7 +11,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: 'mail-app',
 
 
     // frameworks to use
