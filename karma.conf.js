@@ -23,11 +23,11 @@ module.exports = function(config) {
     files: [
         entry,
         'node_modules/angular-mocks/angular-mocks.js',
-        "services/tests.js",
-        "mails/tests.js",
-        "contacts/tests.js",
-        "shared/tests.js",
-        "main/tests.js"
+        "source/services/tests.js",
+        "source/mails/tests.js",
+        "source/contacts/tests.js",
+        "source/shared/tests.js",
+        "source/main/tests.js"
     ],
 
 
