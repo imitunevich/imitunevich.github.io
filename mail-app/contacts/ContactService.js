@@ -1,6 +1,6 @@
 "use strict";
 
-import BaseService from "../services/baseService"
+import BaseService from "../commonServices/baseService"
 
 class ContactService extends BaseService {
     constructor($http, UtilsService) {
