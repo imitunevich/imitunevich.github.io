@@ -1,6 +1,6 @@
 "use strict";
 
-import ListController from "../controllers/listController";
+import ListController from "../commonControllers/listController";
 
 class ContactListController extends ListController {
     constructor(ContactService) {
