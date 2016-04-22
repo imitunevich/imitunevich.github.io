@@ -1,7 +1,8 @@
 module.exports = {
-    entry: "./scripts/app",
+    entry: "./app",
     output: {
-        path:     __dirname + '/scripts',
+        path:     __dirname + '/public',
+        publicPath: '/public/',
         filename: "mail-app.js"
     },
     watch: true, //пересборка live

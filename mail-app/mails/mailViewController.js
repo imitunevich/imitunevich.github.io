@@ -1,6 +1,6 @@
 "use strict";
 
-import ViewController  from "../controllers/viewController";
+import ViewController  from "../commonControllers/viewController";
 
 class MailViewController extends ViewController {
     constructor(MailService, $state, $timeout) {

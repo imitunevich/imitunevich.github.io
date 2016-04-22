@@ -21,12 +21,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        "scripts/angular.js",
-        "scripts/angular-messages.js",
-        "scripts/angular-ui-router.js",
-        "scripts/angular-mocks.js",
-        "scripts/angular-sanitize.js",
         entry,
+        'node_modules/angular-mocks/angular-mocks.js',
         "services/tests.js",
         "mails/tests.js",
         "contacts/tests.js",
@@ -93,7 +89,7 @@ module.exports = function(config) {
       //1) entry +".js"
       //2) preprocessors
       //3) webpack property
-      //3) plugins (works without them for me)
+      //4) plugins (works without them for me)
 
 
   })

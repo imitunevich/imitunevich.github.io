@@ -1,7 +1,10 @@
 "use strict";
 
+import uiRouter from "angular-ui-router";
+import ngMessages from "angular-messages";
+
 import "../shared";
-import "../services";
+import "../commonServices";
 import contactPageComponent from "./contactPageComponent";
 import contactListComponent from "./contactListComponent";
 import contactViewComponent from "./contactViewComponent";
@@ -11,7 +14,7 @@ import contactViewStateTemplate from "./views/contact-view-state.html";
 import contactViewStateController from "./contactViewStateController";
 import ContactService from "./contactService";
 
-const contacts = angular.module("contacts", ["common", "services", "ngMessages", "ui.router", "ngSanitize"]);
+const contacts = angular.module("contacts", [uiRouter, ngMessages, "shared", "commonServices"]);
 
 contacts.config(function ($stateProvider) {
     $stateProvider

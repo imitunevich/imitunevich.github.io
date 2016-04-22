@@ -3,9 +3,9 @@
 import customButtonComponent from "./customButtonComponent";
 import messagesComponent from "./messagesComponent";
 
-const common = angular.module("common", []);
+const shared = angular.module("shared", []);
 
-common.component("customButton", customButtonComponent);
-common.component("messages", messagesComponent);
+shared.component("customButton", customButtonComponent);
+shared.component("messages", messagesComponent);
 
-export default common;
+export default shared;

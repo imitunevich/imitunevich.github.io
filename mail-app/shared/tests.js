@@ -4,7 +4,7 @@ describe("components", function () {
 
     var component, scope, $componentController;
 
-    beforeEach(module("common"));
+    beforeEach(module("shared"));
 
     beforeEach(inject(function ($rootScope, _$componentController_) {
         $componentController = _$componentController_;

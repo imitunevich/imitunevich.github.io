@@ -1,7 +1,12 @@
 "use strict";
 
+import uiRouter from "angular-ui-router";
+import ngMessages from "angular-messages";
+import ngSanitize from "angular-sanitize";
+
 import "../shared";
-import "../services";
+import "../commonServices";
+
 import foldersComponent from "./foldersComponent";
 import mailPageComponent from "./mailPageComponent";
 import mailListComponent from "./mailListComponent";
@@ -15,7 +20,7 @@ import mailViewStateController from "./mailViewStateController";
 import onExitMailViewState from "./onExitMailViewState";
 import MailService from "./mailService";
 
-const mails = angular.module("mails", ["common", "services", "ngMessages", "ui.router"]);
+const mails = angular.module("mails", [uiRouter, ngMessages, ngSanitize, "shared", "commonServices"]);
 
 mails.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider
