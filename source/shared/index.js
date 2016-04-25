@@ -1,7 +1,7 @@
 "use strict";
 
-import customButtonComponent from "./customButtonComponent";
-import messagesComponent from "./messagesComponent";
+import customButtonComponent from "./customButton/customButtonComponent";
+import messagesComponent from "./messages/messagesComponent";
 
 const shared = angular.module("shared", []);
 

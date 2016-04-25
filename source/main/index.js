@@ -6,8 +6,8 @@ import "../mails";
 import "../contacts";
 import "../commonServices";
 
-import mainPageComonent from "./mainPageComponent";
-import topNavComponent from "./topNavComponent";
+import mainPageComonent from "./mainPage/mainPageComponent";
+import topNavComponent from "./topNav/topNavComponent";
 
 const mailApp = angular.module("mailApp", ["mails","contacts","commonServices"]);
 

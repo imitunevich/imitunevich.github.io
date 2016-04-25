@@ -1,6 +1,6 @@
 "use strict";
 
-import foldersTemplate from "./views/folder-list.html";
+import foldersTemplate from "./folder-list.html";
 
 const folders = {
     template: foldersTemplate,

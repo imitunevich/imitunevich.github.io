@@ -1,6 +1,6 @@
 "use strict";
 
-import ViewController from "../commonControllers/viewController";
+import ViewController from "../../commonControllers/viewController";
 
 class ContactViewController extends ViewController {
     constructor(ContactService, $state) {

@@ -7,17 +7,17 @@ import ngSanitize from "angular-sanitize";
 import "../shared";
 import "../commonServices";
 
-import foldersComponent from "./foldersComponent";
-import mailPageComponent from "./mailPageComponent";
-import mailListComponent from "./mailListComponent";
-import mailViewComponent from "./mailViewComponent";
-import autocompleteComponent from "./autocompleteComponent";
-import mailStateTemplate from "./views/mail-state.html";
-import mailListStateTemplate from "./views/mail-list-state.html";
-import mailViewStateTemplate from "./views/mail-view-state.html";
-import mailListStateController from "./mailListStateController";
-import mailViewStateController from "./mailViewStateController";
-import onExitMailViewState from "./onExitMailViewState";
+import foldersComponent from "./folders/foldersComponent";
+import mailPageComponent from "./mailPage/mailPageComponent";
+import mailListComponent from "./mailList/mailListComponent";
+import mailViewComponent from "./mailView/mailViewComponent";
+import autocompleteComponent from "./autocomplete/autocompleteComponent";
+import mailStateTemplate from "./states/mailState/mail-state.html";
+import mailListStateTemplate from "./states/mailListState/mail-list-state.html";
+import mailViewStateTemplate from "./states/mailViewState/mail-view-state.html";
+import mailListStateController from "./states/mailListState/mailListStateController";
+import mailViewStateController from "./states/mailViewState/mailViewStateController";
+import onExitMailViewState from "./states/mailViewState/onExitMailViewState";
 import MailService from "./mailService";
 
 const mails = angular.module("mails", [uiRouter, ngMessages, ngSanitize, "shared", "commonServices"]);

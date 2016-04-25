@@ -1,6 +1,6 @@
 "use strict";
 
-import mailViewTemplate from "./views/mail-view.html";
+import mailViewTemplate from "./mail-view.html";
 import MailViewController from "./mailViewController";
 
 const mailView = {

@@ -1,6 +1,6 @@
 "use strict";
 
-import customButtonTemplate from "./views/custom-button.html";
+import customButtonTemplate from "./custom-button.html";
 
 const customButton = {
     bindings: {

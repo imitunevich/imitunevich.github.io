@@ -1,6 +1,6 @@
 "use strict";
 
-import mainPageTemplate from "./views/main-page.html";
+import mainPageTemplate from "./main-page.html";
 
 const mainPage = {
     template: mainPageTemplate,

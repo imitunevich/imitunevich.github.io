@@ -1,6 +1,6 @@
 "use strict";
 
-import contactPageTemplate from "./views/contact-page.html";
+import contactPageTemplate from "./contact-page.html";
 
 const contactPage = {
     template: contactPageTemplate,

@@ -5,13 +5,13 @@ import ngMessages from "angular-messages";
 
 import "../shared";
 import "../commonServices";
-import contactPageComponent from "./contactPageComponent";
-import contactListComponent from "./contactListComponent";
-import contactViewComponent from "./contactViewComponent";
-import changeDateFormatDirective from "./changeDateFormatDirective";
-import contactsStateTemplate from "./views/contacts-state.html";
-import contactViewStateTemplate from "./views/contact-view-state.html";
-import contactViewStateController from "./contactViewStateController";
+import contactPageComponent from "./contactPage/contactPageComponent";
+import contactListComponent from "./contactList/contactListComponent";
+import contactViewComponent from "./contactView/contactViewComponent";
+import changeDateFormatDirective from "./changeDateFormat/changeDateFormatDirective";
+import contactsStateTemplate from "./states/contactsState/contacts-state.html";
+import contactViewStateTemplate from "./states/contactViewState/contact-view-state.html";
+import contactViewStateController from "./states/contactViewState/contactViewStateController";
 import ContactService from "./contactService";
 
 const contacts = angular.module("contacts", [uiRouter, ngMessages, "shared", "commonServices"]);

@@ -1,6 +1,6 @@
 "use strict";
 
-import autocompleteTemplate from "./views/autocomplete.html";
+import autocompleteTemplate from "./autocomplete.html";
 import AutocompleteController from "./autocompleteController"
 
 const autocomplete = {

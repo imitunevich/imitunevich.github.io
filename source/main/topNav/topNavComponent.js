@@ -1,6 +1,6 @@
 "use strict";
 
-import topNavTemplate from "./views/top-nav.html";
+import topNavTemplate from "./top-nav.html";
 
 const topNav = {
     bindings: {

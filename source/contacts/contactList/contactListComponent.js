@@ -1,6 +1,6 @@
 "use strict";
 
-import contactListTemplate from "./views/contact-list.html";
+import contactListTemplate from "./contact-list.html";
 import ContactListController from "./contactListController";
 
 const contactList = {

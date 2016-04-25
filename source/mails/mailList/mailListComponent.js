@@ -1,6 +1,6 @@
 "use strict";
 
-import mailListTemplate from "./views/mail-list.html";
+import mailListTemplate from "./mail-list.html";
 import MailListController from "./mailListController";
 
 const mailList = {

@@ -1,6 +1,6 @@
 "use strict";
 
-import messagesTemplate from "./views/messages.html";
+import messagesTemplate from "./messages.html";
 
 const messages = {
     bindings: {

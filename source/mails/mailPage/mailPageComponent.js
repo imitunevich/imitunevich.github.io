@@ -1,6 +1,6 @@
 "use strict";
 
-import mailPageTemplate from "./views/mail-page.html";
+import mailPageTemplate from "./mail-page.html";
 
 const mailPage = {
     template: mailPageTemplate,
