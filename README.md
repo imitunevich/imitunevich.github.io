@@ -1,7 +1,7 @@
 # Mail Application
 
 ## Installing and running locally
-`$ npm install`\n
+`$ npm install`<br/>
 `$ npm start`
 
 ## Local Demo on [http://localhost:8181](http://localhost:8181)
