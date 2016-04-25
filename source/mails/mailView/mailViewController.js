@@ -30,7 +30,7 @@ class MailViewController extends ViewController {
         return this.mailId === undefined;
     }
 
-    get isAutocompleteFocused(){
+    get isAutocompleteFocused() {
         return this._isAutocompleteFocused;
     }
 
@@ -53,23 +53,23 @@ class MailViewController extends ViewController {
         this.state.go("mailList", {folderName: this.service.selectedFolder}, {reload: 'mailList'});
     }
 
-    onEmailChange(){
+    onEmailChange() {
         this.isAutocompleteVisible = !!(this.mail.email);
     }
 
-    onEmailBlur(){
+    onEmailBlur() {
         this.hideAutocomplete();
     }
 
-    hideAutocomplete(){
-        this.timeout(()=>{
-            if(!this.isAutocompleteFocused){
+    hideAutocomplete() {
+        this.timeout(()=> {
+            if (!this.isAutocompleteFocused) {
                 this.isAutocompleteVisible = false;
             }
         }, 150);
     }
 
-    chooseContact(contact){
+    chooseContact(contact) {
         this.mail.email = contact.realEmail;
         this.isAutocompleteVisible = false;
     }

@@ -5,7 +5,7 @@ import MailViewController from "./mailViewController";
 
 const mailView = {
     bindings: {
-        mailId:"<"
+        mailId: "<"
     },
     template: mailViewTemplate,
     controller: MailViewController

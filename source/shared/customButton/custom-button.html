@@ -1,5 +1,13 @@
 <!--TODO: create buttons-container-->
 <div ng-class="['button', $ctrl.class, {disabled : $ctrl.disabled}]">
-    <a ng-if="$ctrl.sref" role="button" ng-click="$ctrl.clickHandler()" href="javascript:void(0)" ui-sref="{{$ctrl.sref}}">{{$ctrl.name}}</a>
-    <a ng-if="!$ctrl.sref" role="button" ng-click="$ctrl.clickHandler()" href="javascript:void(0)">{{$ctrl.name}}</a>
+    <a ng-if="$ctrl.sref"
+       role="button"
+       href="javascript:void(0)"
+       ng-click="$ctrl.clickHandler()"
+       ui-sref="{{$ctrl.sref}}">{{$ctrl.name}}</a>
+
+    <a ng-if="!$ctrl.sref"
+       role="button"
+       href="javascript:void(0)"
+       ng-click="$ctrl.clickHandler()">{{$ctrl.name}}</a>
 </div>

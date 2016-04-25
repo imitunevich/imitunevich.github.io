@@ -18,11 +18,10 @@ class BaseService {
 
     add(newItem, dataName = this.dataName) {
         return this.http.post(`${this.utilsService.baseURL}${dataName}.json`, newItem)
-            .then(
-                response => {
-                    newItem.id = response.data.name;
-                    return newItem;
-                })
+            .then(response => {
+                newItem.id = response.data.name;
+                return newItem;
+            })
             .catch(error => console.log(error.message));
     }
 

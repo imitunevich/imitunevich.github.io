@@ -13,7 +13,7 @@ const mainPage = {
             state: "contacts"
         }];
 
-        this.logOut = function(){
+        this.logOut = function () {
             AuthService.logOut();
             $state.go("auth");
         }

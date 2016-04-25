@@ -21,7 +21,7 @@ describe("services", function () {
 
         var BaseService;
 
-        beforeEach(inject(function (_$httpBackend_,_BaseService_, _UtilsService_) {
+        beforeEach(inject(function (_$httpBackend_, _BaseService_, _UtilsService_) {
             baseURL = "https://fiery-inferno-8968.firebaseio.com/";
             dataName = "inbox";
 

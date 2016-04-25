@@ -5,7 +5,7 @@ import contactViewController from "./contactViewController";
 
 const contactView = {
     bindings: {
-        contactId:"<"
+        contactId: "<"
     },
     template: contactViewTemplate,
     controller: contactViewController

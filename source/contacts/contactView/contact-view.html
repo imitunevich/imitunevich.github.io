@@ -10,22 +10,30 @@
         </div>
         <div class="name_row">
             <span class="name_text" ng-if="!$ctrl.editMode">{{$ctrl.contact.fullName}}</span>
-            <input name="name" ng-if="$ctrl.editMode" ng-model="$ctrl.contact.fullName" required ng-minlength="5">
-            <messages element="contactForm.name" errors="$ctrl.nameFieldErrors" visibility="contactForm.name.$dirty"></messages>
+            <input name="name" ng-if="$ctrl.editMode"
+                   ng-model="$ctrl.contact.fullName"
+                   ng-minlength="5" required>
+            <messages element="contactForm.name" errors="$ctrl.nameFieldErrors"
+                      visibility="contactForm.name.$dirty"></messages>
         </div>
         <div class="row">
             <div class="label_wrapper"><label>Mail address</label></div>
             <div class="mail_address">
                 <a ng-if="!$ctrl.editMode" href="mailto:{{$ctrl.contact.email}}">{{$ctrl.contact.email}}</a>
-                <input name="email" ng-if="$ctrl.editMode" ng-model="$ctrl.contact.email" type="email" required>
-                <messages element="contactForm.email" errors="$ctrl.mailFieldErrors" visibility="contactForm.email.$dirty"></messages>
+                <input name="email" type="email"
+                       ng-if="$ctrl.editMode"
+                       ng-model="$ctrl.contact.email" required>
+                <messages element="contactForm.email" errors="$ctrl.mailFieldErrors"
+                          visibility="contactForm.email.$dirty"></messages>
             </div>
         </div>
         <div class="row">
             <div class="label_wrapper"><label>Birthdate</label></div>
             <div class="birthdate">
                 <span ng-if="!$ctrl.editMode">{{$ctrl.contact.birthdate | date: 'dd/MM/yyyy'}}</span>
-                <input ng-if="$ctrl.editMode" change-date-format type="date" ng-model="$ctrl.contact.birthdate">
+                <input ng-if="$ctrl.editMode"
+                       change-date-format type="date"
+                       ng-model="$ctrl.contact.birthdate">
             </div>
         </div>
         <div class="row">

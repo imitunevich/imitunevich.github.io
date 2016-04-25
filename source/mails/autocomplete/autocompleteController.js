@@ -1,7 +1,7 @@
 "use strict";
 
 class AutocomleteController {
-    constructor(BaseService){
+    constructor(BaseService) {
         BaseService.getData("users").then(responce => {
             this.contacts = this.contactsFull = responce;
             this.filterContacts();
@@ -18,28 +18,28 @@ class AutocomleteController {
         this.filterContacts();
     }
 
-    filterContacts(){
-        if(this.contactsFull){
+    filterContacts() {
+        if (this.contactsFull) {
             var contactsFromCash = this.contactsCash[this.term];
-            if(contactsFromCash){
+            if (contactsFromCash) {
                 this.contacts = contactsFromCash;
-            }else{
+            } else {
                 this.contacts = [];
-                for(var i=0; i<this.contactsFull.length; i++){
+                for (var i = 0; i < this.contactsFull.length; i++) {
                     var currentContact = this.contactsFull[i];
-                    this.selectContact(currentContact,"fullName") || this.selectContact(currentContact,"email");
+                    this.selectContact(currentContact, "fullName") || this.selectContact(currentContact, "email");
                 }
 
                 this.contactsCash[this.term] = this.contacts;
 
-                if(this.contacts.length == 0) this.isVisible = false;
+                if (this.contacts.length == 0) this.isVisible = false;
             }
         }
     }
 
-    selectContact (contact,field){
+    selectContact(contact, field) {
         var updatedField = this.selectTerm(contact[field]);
-        if(contact[field] != updatedField){
+        if (contact[field] != updatedField) {
             var selectedContact = angular.copy(contact);
             selectedContact.realEmail = selectedContact.email;
             selectedContact[field] = updatedField;
@@ -49,9 +49,9 @@ class AutocomleteController {
         return false;
     }
 
-    selectTerm (str){
-        var re = new RegExp(this.term,"i");
-        return str.replace(re,function(str){
+    selectTerm(str) {
+        var re = new RegExp(this.term, "i");
+        return str.replace(re, function (str) {
             return `<b>${str}</b>`;
         });
     }

@@ -6,6 +6,7 @@
     <ul>
         <li ng-repeat="mail in $ctrl.mails | orderBy: '-date'">
             <input type="checkbox" ng-model="mail.checked"/>
+
             <div class="row" ui-sref="mailView({mailId:mail.id})">
                 <div class="mail_address">
                     <a>{{mail.name ? mail.name : mail.email}}</a>

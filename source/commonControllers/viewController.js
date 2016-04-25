@@ -18,10 +18,9 @@ class ViewController {
         if (itemId) {
             this.service.getSelectedItem(folderName, itemId)
                 .then((response) => {
-                        this.item = response;
-                        this.service.selectedItem = this.item;
-                    }
-                ).catch(error => console.log(error.message));
+                    this.item = response;
+                    this.service.selectedItem = this.item;
+                }).catch(error => console.log(error.message));
         } else {
             this.item = this.service.selectedItem = {};
         }

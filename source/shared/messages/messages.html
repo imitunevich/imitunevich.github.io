@@ -1,3 +1,8 @@
-<div class="error_msg" ng-messages="$ctrl.element.$error" role="alert" ng-if="$ctrl.visibility">
-    <span ng-repeat="err in $ctrl.errors" ng-message-exp="err.type" class="msg" >{{err.text}}</span>
+<div class="error_msg"
+     role="alert"
+     ng-messages="$ctrl.element.$error"
+     ng-if="$ctrl.visibility">
+    <span ng-repeat="err in $ctrl.errors"
+          ng-message-exp="err.type"
+          class="msg">{{err.text}}</span>
 </div>

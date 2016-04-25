@@ -27,7 +27,9 @@
                        autocomplete="off" type="email" required>
                 <messages element="newMailForm.email" errors="$ctrl.mailFieldErrors"
                           visibility="newMailForm.email.$dirty"></messages>
-                <autocomplete term="$ctrl.mail.email" has-focus="$ctrl.isAutocompleteFocused" is-visible="$ctrl.isAutocompleteVisible" choose-contact="$ctrl.chooseContact(contact)" ng-if="$ctrl.isAutocompleteVisible"></autocomplete>
+                <autocomplete term="$ctrl.mail.email" has-focus="$ctrl.isAutocompleteFocused"
+                              is-visible="$ctrl.isAutocompleteVisible" choose-contact="$ctrl.chooseContact(contact)"
+                              ng-if="$ctrl.isAutocompleteVisible"></autocomplete>
             </div>
             <div class="topic">
                 <label>Subject:</label>

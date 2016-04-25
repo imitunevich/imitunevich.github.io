@@ -7,7 +7,7 @@ const topNav = {
         navList: "<"
     },
     template: topNavTemplate,
-    controller: function (ContactService,MailService) {
+    controller: function (ContactService, MailService) {
         this.reset = function () {
             ContactService.selectedContact = null;
             MailService.selectedMail = null;
