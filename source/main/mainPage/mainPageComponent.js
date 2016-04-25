@@ -4,7 +4,7 @@ import mainPageTemplate from "./main-page.html";
 
 const mainPage = {
     template: mainPageTemplate,
-    controller: function () {
+    controller: function ($state, AuthService) {
         this.pageList = [{
             title: "Mails",
             state: "mail"
@@ -12,6 +12,11 @@ const mainPage = {
             title: "Contacts",
             state: "contacts"
         }];
+
+        this.logOut = function(){
+            AuthService.logOut();
+            $state.go("auth");
+        }
     }
 };
 

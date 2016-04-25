@@ -78,7 +78,7 @@ header {
 header h1 {
     display: inline-block;
     font-size: 30px;
-    padding: 0 70px 0 45px;
+    padding: 1px 70px 1px 45px;
 }
 
 header .top_nav {
@@ -94,7 +94,8 @@ header .top_nav ul li {
     display: inline-block;
 }
 
-header .top_nav a {
+header .top_nav a,
+header .logout {
     display: inline-block;
     padding: 30px 5px 23px 5px;
     font-size: 20px;
@@ -104,17 +105,23 @@ header .top_nav a {
     color: #FFFFFF;
 }
 
-header .top_nav a:visited {
+header .top_nav a:visited,
+header .logout:visited{
     color: #FFFFFF;
 }
 
-header .top_nav a:hover {
+header .top_nav a:hover,
+header .logout:hover{
     background-color: #147fcb;
 }
 
 header .top_nav a.active,
 header .top_nav a.active:hover {
     background-color: #1378c0;
+}
+
+header .logout{
+    float: right;
 }
 
 main {
@@ -433,6 +440,33 @@ main .right_col {
 
 .mail_view .autocomplete li:hover .mail_address{
     color:#656972;
+}
+
+.loginForm{
+    width: 350px;
+    margin: 0 auto;
+    color: #656972;
+}
+
+.loginForm .row{
+    padding: 10px 0;
+}
+
+.loginForm .row .label_wrapper{
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.loginForm .button{
+    margin: 10px 0 0 85px;
+}
+
+.loginForm .error_msg {
+    color: #FF0000;
+    padding-left: 10px;
+    position: static;
 }
 
 .container {

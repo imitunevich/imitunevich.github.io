@@ -43,7 +43,6 @@ class MailViewController extends ViewController {
         this.mail.date = new Date().getTime();
         this.service.sendMail(this.mail)
             .then(response => {
-                console.log(this.service.selectedFolder);
                 this.service.selectedMail = null;
                 this.state.go("mailList", {folderName: this.service.selectedFolder});
             })

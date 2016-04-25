@@ -31,6 +31,7 @@ mails.config(function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
         .state("mail", {
+            parent: "main",
             url: "/mail",
             template: mailStateTemplate
         })

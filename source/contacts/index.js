@@ -19,6 +19,7 @@ const contacts = angular.module("contacts", [uiRouter, ngMessages, "shared", "co
 contacts.config(function ($stateProvider) {
     $stateProvider
         .state("contacts", {
+            parent: "main",
             url: "/contacts",
             template: contactsStateTemplate
         })

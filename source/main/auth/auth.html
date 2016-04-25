@@ -1,0 +1,31 @@
+<header>
+    <div class="container">
+        <h1>MailApp</h1>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <form name="loginForm" class="loginForm" novalidate>
+            <div class="row">
+                <div class="label_wrapper">
+                    <label>Login</label>
+                </div>
+                <input name="login" ng-model="$ctrl.login" required>
+            </div>
+            <div class="row">
+                <div class="label_wrapper">
+                    <label>Password</label>
+                </div>
+                <input ng-model="$ctrl.password" type="password" required>
+            </div>
+
+            <div class="row">
+                <custom-button name="'Sign in'"
+                               disabled="loginForm.$invalid"
+                               click-handler="$ctrl.logIn()">
+                </custom-button>
+                <span class="error_msg" ng-if="$ctrl.hasError">Wrong login or password</span>
+            </div>
+        </form>
+    </div>
+</main>
