@@ -1,6 +1,6 @@
 "use strict";
 
-const AuthService = function ($window, $http, UtilsService) {
+const AuthService = function ($state, $window, $http, UtilsService) {
     this.credentials = null;
 
     this.hasLoggedInUser = function () {

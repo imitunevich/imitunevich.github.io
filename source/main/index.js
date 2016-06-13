@@ -12,9 +12,6 @@ import mainPageComonent from "./mainPage/mainPageComponent";
 import topNavComponent from "./topNav/topNavComponent";
 import authComponent from "./auth/authComponent"
 import AuthService from "./authService";
-import authStateTemplate from "./states/auth/auth-state.html"
-import mainStateTemplate from "./states/main/main-state.html"
-import resolveMainState from "./states/main/resolveMainState"
 
 const mailApp = angular.module("mailApp", [uiRouter, "mails", "contacts", "commonServices", "shared"]);
 
@@ -22,11 +19,19 @@ mailApp.config(function ($stateProvider) {
     $stateProvider
         .state("main", {
             state: "abstract",
-            template: mainStateTemplate,
-            resolve: resolveMainState
+            template: "<main-page></main-page>",
+            resolve: {
+                auth: function ($timeout, $state, AuthService) {
+                    if (!AuthService.hasLoggedInUser()) {
+                        $timeout(function () {
+                            $state.go('auth');
+                        });
+                    }
+                }
+            }
         })
         .state("auth", {
-            template: authStateTemplate,
+            template: "<auth></auth>",
             url: "/login"
         })
 });
